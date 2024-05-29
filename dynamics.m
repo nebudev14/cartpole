@@ -1,5 +1,5 @@
 m_c = 5; % Mass of the cart
-m_p = 1; % Mass of the pendulum
+m_p = 2; % Mass of the pendulum
 l = 2; % Length of the pendulum
 g = -10;
 
@@ -23,3 +23,27 @@ y0 = [0; 0; pi; .5];
 [t, y] = ode45(@(t, y)dynamics(y, m_c, m_p, l, g, 0), tspan, y0)
 plot(t, y)
 legend('x', 'dx/dt', 'theta', 'dtheta/dt')
+
+% % Animation
+% axis(gca, 'equal');
+% axis([-10 10 -10 10]);
+% grid on;
+% 
+% O = [0, 0]; % origin
+
+% p
+% for i=1:length(y(:,3))
+%     p = l* [sin(y(i, 3)) -cos(y(i, 3))];
+%     pend_circle = viscircles(O, 0.01);
+% 
+%     string = line([O(1) p(1)], [O(2) p(2)]);
+%     ball = viscircles(p, 0.05);
+%     p
+%     pause(0.01);
+% 
+%         delete(pend_circle);5
+%         delete(string);
+%         delete(ball);
+% 
+% end
+% % 
