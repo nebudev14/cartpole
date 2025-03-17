@@ -44,6 +44,6 @@ drawnow
 hold off
 end
 % 
-for i=1:length(t)
-    drawcartpend(y(i, :), m_p, m_c, l)
-end
+% for i=1:length(t)
+%     drawcartpend(y(i, :), m_p, m_c, l)
+% end
